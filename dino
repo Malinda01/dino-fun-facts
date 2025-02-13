@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur Facts</title>
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        #fact {
+            margin: 20px 0;
+            font-size: 1.2em;
+            text-align: center;
+            max-width: 600px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Dinosaur Fact</h1>
+    <div id="fact">Click the button to see a dinosaur fact!</div>
+    <button onclick="displayRandomFact()">Show Random Fact</button>
+
+    <script>
+        const facts = [
+            "Dinosaurs were a diverse group of reptiles that lived during the Mesozoic Era.",
+            "Birds are considered the modern descendants of theropod dinosaurs.",
+            "Dinosaurs varied greatly in size, from the tiny bee hummingbird to the massive Argentinosaurus.",
+            "The term 'dinosaur' was coined by Sir Richard Owen in 1842.",
+            "Many theropod dinosaurs, including Velociraptor, had feathers.",
+            "Dinosaurs went extinct about 66 million years ago, likely due to an asteroid impact.",
+            "Dinosaurs were both herbivores and carnivores.",
+            "All dinosaurs laid eggs, and some species cared for their young.",
+            "Dinosaur fossils have been found on every continent, including Antarctica.",
+            "Dinosaurs dominated the Earth for over 160 million years."
+        ];
+
+        function displayRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
